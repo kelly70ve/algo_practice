@@ -14,4 +14,13 @@ function fibNumber(num) {
   return fib[num];
 }
 
-fibNumber(14);
+fibNumber(5);
+
+// Source: http://thatjsdude.com/interview/js1.html
+// recursive solution
+
+function fibonacci(n) {
+  return n <= 1 ? n : fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+fibonacci(5);
