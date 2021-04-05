@@ -33,3 +33,22 @@ function primeFactorsTwo(n) {
 
 // Solution almosts works but breaks at 100 - output is [2,2,5,5]
 primeFactorsTwo(100);
+
+// My fix for duplicate output
+
+function primeFactorsThree(n) {
+  var factors = [],
+    divisor = 2;
+
+  while (n > 2) {
+    if (n % divisor == 0 && factors.indexOf(divisor) === -1) {
+      factors.push(divisor);
+      n = n / divisor;
+    } else {
+      divisor++;
+    }
+  }
+  return factors;
+}
+
+primeFactorsThree(100);
